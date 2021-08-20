@@ -15,16 +15,16 @@ scripts:
 
 after_success:
 # Build the PROD ready images
-    - docker build -t multi-client ./client
-    - docker build -t multi-nginx ./nginx
-    - docker build -t multi-server ./server
-    - docker build -t multi-worker ./worker
+    - docker build -t sukumarpradhan/multi-client ./client
+    - docker build -t sukumarpradhan/multi-nginx ./nginx
+    - docker build -t sukumarpradhan/multi-server ./server
+    - docker build -t sukumarpradhan/multi-worker ./worker
   
 # Log in to Dockerhub
     - echo "$DHUB_PASSWD" | docker login -u "$DHUB_ID" --password-stdin
 
 # Push Images to DHub
-    - docker push multi-client
-    - docker push multi-nginx
-    - docker push multi-server
-    - docker push multi-worker
+    - docker push sukumarpradhan/multi-client
+    - docker push sukumarpradhan/multi-nginx
+    - docker push sukumarpradhan/multi-server
+    - docker push sukumarpradhan/multi-worker
