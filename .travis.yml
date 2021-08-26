@@ -25,6 +25,6 @@ after_success:
 
 # Push Images to DHub 
     - docker push sukumarpradhan/multi-client
-    #- docker push sukumarpradhan/multi-nginx
-    #- docker push sukumarpradhan/multi-server
-    #- docker push sukumarpradhan/multi-worker
+    - docker push sukumarpradhan/multi-nginx
+    - docker push sukumarpradhan/multi-server
+    - docker push sukumarpradhan/multi-worker
