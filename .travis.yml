@@ -23,7 +23,7 @@ after_success:
 # Log in to Dockerhub
     - echo "$DHUB_PASSWD" | docker login -u "$DHUB_ID" --password-stdin
 
-# Push Images to DHub
+# Push Images to DHub 
     - docker push sukumarpradhan/multi-client
     #- docker push sukumarpradhan/multi-nginx
     #- docker push sukumarpradhan/multi-server
